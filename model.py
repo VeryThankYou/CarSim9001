@@ -28,7 +28,7 @@ class Engine(object):
 	def updateModel(self, dt):
 		if self.theTank.capacity > 0:
 			self.currentRpm = self.throttlePosition*self.maxRpm
-			self.theTank.capacity.remove(self.currentRpm*self.consumptionConstant)
+			self.theTank.remove(self.currentRpm*self.consumptionConstant)
 			self.theGearbox.rotate(currentRpm*(dt/60))
 		else:
 			currentRpm = 0
@@ -61,7 +61,19 @@ class Gearbox(object):
 	pass
 
 class Tank(object):
-	
+	def __init__(self):
+		self.capacity = 100
+		self.contents = 100
+		
+	def remove(self, amount):
+		if amount < self.contents:
+			self.contents -= amount
+		else:
+			self.contents = 0
+			
+	def refuel(self):
+		self.contents = self.capacity
+		
 	pass
 
 
