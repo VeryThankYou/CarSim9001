@@ -1,6 +1,11 @@
 from random import randint
 
 class Car(object):
+	def __init__(self):
+		self.theEngine = Engine()
+	
+	def updateModel(self, dt):
+		self.theEngine.updateModel(dt)
 	pass
 
 class Wheel(object):
@@ -56,6 +61,7 @@ class Gearbox(object):
 	pass
 
 class Tank(object):
+	
 	pass
 
 
