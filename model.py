@@ -29,7 +29,7 @@ class Engine(object):
 		if self.theTank.capacity > 0:
 			self.currentRpm = self.throttlePosition*self.maxRpm
 			self.theTank.remove(self.currentRpm*self.consumptionConstant)
-			self.theGearbox.rotate(currentRpm*(dt/60))
+			self.theGearbox.rotate(self.currentRpm*(dt/60))
 		else:
 			currentRpm = 0
 	pass
