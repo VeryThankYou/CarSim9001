@@ -1,7 +1,9 @@
 from random import randint
 
 class Car(object):
+#Her beskriver jeg klassen Car, der 
 	def __init__(self):
+	#Her definerer jeg initieringsfunktionen for klassen car. 
 		self.theEngine = Engine()
 	
 	def updateModel(self, dt):
