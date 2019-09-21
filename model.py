@@ -24,7 +24,7 @@ class Wheel(object):
 	def rotate(self, revolutions):
 	#Her definerer jeg rotatemetoden for klassen Wheel. Den modtager parametret revolutions
 		self.orientation = (self.orientation+(revolutions*360))%360
-	#Her bliver orientationsvariablen for objektet opdatereret, hvor der f�rst l�gges en m�ngde grader til variablen lig med 360 ganget med revolutions, og derefter findes modulus af det samlede tal, og variablen s�ttes til dette
+	#Her bliver orientationsvariablen for objektet opdatereret, hvor der f�rst l�gges en m�ngde grader til variablen lig med 360 ganget med revolutions, og derefter findes modulus for 360 af det samlede tal, og variablen s�ttes til dette
 
 class Engine(object):
 #Her beskriver jeg klassen Engine, der arver egenskaber fra object
